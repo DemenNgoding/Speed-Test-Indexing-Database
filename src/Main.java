@@ -6,13 +6,21 @@ public class Main {
         try {
             Searching search = new Searching();
 
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("Input ID = ");
-                int id = scanner.nextInt();
-                scanner.close();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Input ID = ");
+            int id = scanner.nextInt();
+            scanner.close();
 
-                search.getRecordByIdInSQL(id);
-                search.getRecordByIdInBTree(id);
+            System.out.println("====================");
+            System.out.println();
+
+            search.getRecordByIdInSQL(id);
+
+            System.out.println();
+            System.out.println("====================");
+            System.out.println();
+
+            search.getRecordByIdInBTree(id);
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
